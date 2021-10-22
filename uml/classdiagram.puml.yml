@@ -1,0 +1,25 @@
+@startuml
+logout<|-todotable
+
+todotable<|-save
+
+save<|- additem
+additem<|- createname
+createname<|- addlist
+
+save<|- edittable
+editstable<|- editlist
+
+deleteslist<|- deletelist
+
+deletelist <|- todotable
+editlist <|- todotable
+addlist <|- todotable
+
+todotable<|--signup
+signup<|--Signup
+Signup<|-- Application
+
+todotable <|-- Login
+Login <|-- Application
+@enduml
